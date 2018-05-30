@@ -103,7 +103,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: turquoise;
 }
 
 #mainNav .navbar-toggler {
@@ -161,7 +161,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: turquoise;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -171,8 +171,8 @@ img::-moz-selection {
 
 header.masthead {
   text-align: center;
-  color: white;
-  background-image: url("../img/header-bg.jpg");
+  color: turquoise;
+  background-image: url("https://storage.googleapis.com/rsvp-resources/banner-2.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
