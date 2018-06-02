@@ -95,7 +95,7 @@
     }
   }
   .timeline-body {
-    @include subheading-font;
+    @include body-font;
      > ul,
     > p {
       margin-bottom: 0;

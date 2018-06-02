@@ -8,16 +8,16 @@
 }
 
 // Font Mixins
-/*@mixin body-font {
-  font-family: 'lato', 'Roboto','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ @mixin body-font {
+  font-family: 'lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
  }
- */
+ 
  @mixin heading-font {
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
  }
  @mixin script-font {
-  font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-family: 'Snell Roundhand', 'Pinyon Script', 'Helvetica Neue', Arial, cursive;
  }
  @mixin subheading-font {
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
  }

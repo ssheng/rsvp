@@ -3,13 +3,9 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
-/*@mixin body-font {
-  font-family: 'lato', 'Roboto','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
- }
- */
 body {
   overflow-x: hidden;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -35,7 +31,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section {
@@ -60,7 +56,7 @@ section h3.section-subheading {
   font-style: italic;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -70,7 +66,7 @@ section h3.section-subheading {
 }
 
 .btn {
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
   font-weight: 500;
   font-style: italic;
   line-height: 10px;
@@ -126,13 +122,13 @@ img::-moz-selection {
   color: black;
   border: 0;
   background-color: #739287;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
   color: #739287;
   font-weight: 525;
-  font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-family: 'Snell Roundhand', 'Pinyon Script', 'Helvetica Neue', Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
@@ -145,7 +141,7 @@ img::-moz-selection {
   padding: 0.75em 0;
   letter-spacing: 1px;
   color: black;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
@@ -211,7 +207,7 @@ header.masthead .intro-text .intro-lead-in {
   line-height: 22px;
   margin-bottom: 25px;
   color: #739287;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text .intro-heading {
@@ -220,7 +216,7 @@ header.masthead .intro-text .intro-heading {
   line-height: 70px;
   margin-bottom: 25px;
   color: #1D4568;
-  font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+  font-family: 'Snell Roundhand', 'Pinyon Script', 'Helvetica Neue', Arial, cursive;
 }
 
 @media (min-width: 768px) {
@@ -237,14 +233,14 @@ header.masthead .intro-text .intro-heading {
     font-style: normal;
     line-height: 40px;
     margin-bottom: 25px;
-    font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 95px;
     font-weight: 700;
     line-height: 100px;
     margin-bottom: 25px;
-    font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+    font-family: 'Snell Roundhand', 'Pinyon Script', 'Helvetica Neue', Arial, cursive;
   }
 }
 
@@ -262,14 +258,14 @@ header.masthead .intro-text .intro-heading {
     font-style: normal;
     line-height: 50px;
     margin-bottom: 25px;
-    font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
     font-size: 70px;
     font-weight: 700;
     line-height: 70px;
     margin-bottom: 25px;
-    font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+    font-family: 'Snell Roundhand', 'Pinyon Script', 'Helvetica Neue', Arial, cursive;
   }
 }
 
@@ -342,7 +338,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .timeline > li .timeline-image h4 {
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 15px;
   margin-top: 15px;
@@ -375,7 +371,7 @@ header.masthead .intro-text .intro-heading {
 .timeline .timeline-heading h4 {
   margin-top: 0;
   color: inherit;
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .timeline .timeline-heading h4.subheading {
@@ -383,7 +379,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .timeline .timeline-body {
-  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .timeline .timeline-body > ul,
@@ -465,11 +461,17 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
-section#contact {
-  background-color: #212529;
-  background-image: url("../img/map-image.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+  font-size: 25px;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.service-body {
+  font-size: 17px;
+  font-weight: 100;
+  font-family: 'lato', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 section#contact .section-heading {
@@ -503,27 +505,27 @@ section#contact .form-control:focus {
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 footer {
@@ -535,7 +537,7 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 footer ul.quicklinks {
@@ -543,7 +545,7 @@ footer ul.quicklinks {
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-family: Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 ul.social-buttons {

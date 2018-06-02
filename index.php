@@ -28,7 +28,8 @@ $rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet" type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet" type='text/css'>
 
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
