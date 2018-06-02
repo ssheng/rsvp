@@ -4,8 +4,11 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var connect = require('gulp-connect-php');
 var pkg = require('./package.json');
-var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync')({
+  proxy: '127.0.0.1:8000'
+})
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -113,9 +116,18 @@ gulp.task('browserSync', function() {
   });
 });
 
+// Connect PHP server
+gulp.task('connect', function() {
+  connect.server();
+});
+
+gulp.task('connectSync', function() {
+});
+
 // Dev task
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js', 'connectSync'], function() {
   gulp.watch('./scss/*.scss', ['css']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./*.html', browserSync.reload);
+  gulp.watch('**/*.php', browserSync.reload);
 });

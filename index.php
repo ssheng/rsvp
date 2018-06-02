@@ -24,7 +24,7 @@
   </head>
 
   <body id="page-top">
-
+    <?php echo $_SERVER['REQUEST_URI'];; ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
