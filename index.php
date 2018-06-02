@@ -203,9 +203,9 @@ $rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
                 <div class="form-group">
                   <div class="dropdown">
                     <label for = "sail">Will you & your guest join us for sunset sail? *</label>
-                    <div class="btn-group" role="group" aria-label="...">
-                      <button type="button" class="btn btn-default">Yes</button>
-                      <button type="button" class="btn btn-default">No</button>
+                    <div class="btn-group-lg" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-secondary">Yes</button>
+                      <button type="button" class="btn btn-secondary">No</button>
                     </div>
                   </div>
                 </div>
@@ -213,16 +213,15 @@ $rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
                 <div class="form-group">
                   <div class="dropdown">
                     <label for = "sail">Party Size</label>
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                      Dropdown
-                      <span class="caret"></span>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Dropdown button
                     </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                      <li>1</li>
-                      <li>2</li>
-                      <li>3</li>
-                      <li>4</li>
-                    </ul>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">1</a>
+                      <a class="dropdown-item" href="#">2</a>
+                      <a class="dropdown-item" href="#">3</a>
+                      <a class="dropdown-item" href="#">4</a>
+                    </div>
                   </div>
                 </div>
 
