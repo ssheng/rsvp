@@ -1,0 +1,12 @@
+// Styling for the services section
+.service-heading {
+  margin: 15px 0;
+  text-transform: none;
+  font-size: 25px;
+  @include subheading-font;
+}
+.service-body {
+  font-size: 17px;
+  font-weight: 100;
+  @include body-font;
+}
