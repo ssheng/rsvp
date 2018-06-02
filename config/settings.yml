@@ -1,0 +1,5 @@
+# Google credentials and configuration
+google_project_id: wedding-rsvp-201609
+
+# options are "mysql", "postgres", "mongodb", or "datastore"
+bookshelf_backend: datastore

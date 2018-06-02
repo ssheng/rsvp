@@ -1,4 +1,9 @@
 {
+  "autoload": {
+    "psr-4": {
+      "Rsvp\\DataModel\\": ["src/"]
+    }
+  },
   "require": {
     "php": "5.6.*|7.0.*|7.1.*|7.2.*",
     "google/cloud": "^0.21",

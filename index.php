@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Rsvp\DataModel\Datastore;
+
+//$id = ltrim($_SERVER['REQUEST_URI'], '/');
+$datastore = new Datastore('wedding-rsvp-201609');
+$rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
+
+?>
+
 <html lang="en">
 
   <head>
@@ -24,7 +36,6 @@
   </head>
 
   <body id="page-top">
-    <?php echo $_SERVER['REQUEST_URI'];; ?>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -156,7 +167,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Hello, Alex!</h2>
+            <h2 class="section-heading">Hello, <?php echo $rsvp['invitees']; ?>!</h2>
             <h3 class="section-subheading text-muted">We would like to invite you to our wedding
             <br> When: Sat, Oct. 6, 2018
             <br> Where: Merriman's Maui, Hawaii</h3>
@@ -179,7 +190,7 @@
                     <input class="form-control" id="guests" type="text" placeholder="# of guests *" required="required" data-validation-required-message="How many guests will you bring (not include yourself/yourselves)?">
                     <p class="help-block text-danger"></p>
                   </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for = "sail">Will you & your guest join us for sunset sail? *</label>
                     <select id="sail" name="sail" required>
                         <option value="" disabled="disabled" selected="selected">Choose an option</option>
@@ -187,7 +198,34 @@
                         <option value="no">No</option>
                     </select>
                     <p class="help-block text-danger"></p>
+                </div>-->
+
+                <div class="form-group">
+                  <div class="dropdown">
+                    <label for = "sail">Will you & your guest join us for sunset sail? *</label>
+                    <div class="btn-group" role="group" aria-label="...">
+                      <button type="button" class="btn btn-default">Yes</button>
+                      <button type="button" class="btn btn-default">No</button>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="form-group">
+                  <div class="dropdown">
+                    <label for = "sail">Party Size</label>
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      Dropdown
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                    </ul>
+                  </div>
+                </div>
+
               </div>
                 <div class="col-md-6">
                   <div class="form-group">
