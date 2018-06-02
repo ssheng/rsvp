@@ -3,9 +3,13 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
+/*@mixin body-font {
+  font-family: 'lato', 'Roboto','Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ }
+ */
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -13,15 +17,15 @@ p {
 }
 
 a {
-  color: #fed136;
+  color: #739287;
 }
 
 a:hover {
-  color: #fec503;
+  color: #5c766d;
 }
 
 .text-primary {
-  color: #fed136 !important;
+  color: #739287 !important;
 }
 
 h1,
@@ -31,7 +35,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section {
@@ -39,9 +43,15 @@ section {
 }
 
 section h2.section-heading {
-  font-size: 40px;
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 38px;
   margin-top: 0;
   margin-bottom: 15px;
+}
+
+section h2::first-letter {
+  font-size: 150%;
 }
 
 section h3.section-subheading {
@@ -50,7 +60,7 @@ section h3.section-subheading {
   font-style: italic;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -60,37 +70,39 @@ section h3.section-subheading {
 }
 
 .btn {
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 700;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 10px;
 }
 
 .btn-xl {
-  font-size: 18px;
+  font-size: 22px;
   padding: 20px 40px;
 }
 
 .btn-primary {
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #739287;
+  border-color: #739287;
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #fec810 !important;
-  border-color: #fec810 !important;
+  background-color: #627d73 !important;
+  border-color: #627d73 !important;
   color: white;
 }
 
 .btn-primary:active, .btn-primary:focus {
-  box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem #556e669f !important;
 }
 
 ::-moz-selection {
-  background: #fed136;
+  background: #739287;
   text-shadow: none;
 }
 
 ::selection {
-  background: #fed136;
+  background: #739287;
   text-shadow: none;
 }
 
@@ -103,7 +115,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: turquoise;
+  background-color: #F7EFE9;
 }
 
 #mainNav .navbar-toggler {
@@ -111,19 +123,20 @@ img::-moz-selection {
   right: 0;
   padding: 13px;
   text-transform: uppercase;
-  color: white;
+  color: black;
   border: 0;
-  background-color: #fed136;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #739287;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
-  font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
+  color: #739287;
+  font-weight: 525;
+  font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #5c766d;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -131,12 +144,12 @@ img::-moz-selection {
   font-weight: 400;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: black;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #fed136;
+  color: #739287;
 }
 
 @media (min-width: 992px) {
@@ -161,7 +174,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: turquoise;
+    background-color: #F7EFE9;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -171,11 +184,13 @@ img::-moz-selection {
 
 header.masthead {
   text-align: center;
-  color: turquoise;
-  background-image: url("https://storage.googleapis.com/rsvp-resources/banner-2.jpg");
+  background-image: url("https://storage.googleapis.com/rsvp-resources/038-s.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: left center;
+  background-size: 100% auto;
+  height: 100%;
+  width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -183,210 +198,79 @@ header.masthead {
 }
 
 header.masthead .intro-text {
+  text-align: left;
+  position: relative;
+  left: 425px;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 
 header.masthead .intro-text .intro-lead-in {
   font-size: 22px;
-  font-style: italic;
+  font-style: normal;
   line-height: 22px;
   margin-bottom: 25px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #739287;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text .intro-heading {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 70px;
   margin-bottom: 25px;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #1D4568;
+  font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 @media (min-width: 768px) {
+  header.masthead {
+    padding-top: 175px;
+    padding-bottom: 0px;
+  }
   header.masthead .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 175px;
+    padding-bottom: 300px;
   }
   header.masthead .intro-text .intro-lead-in {
-    font-size: 40px;
-    font-style: italic;
+    font-size: 35px;
+    font-style: normal;
     line-height: 40px;
     margin-bottom: 25px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   header.masthead .intro-text .intro-heading {
-    font-size: 75px;
+    font-size: 95px;
     font-weight: 700;
-    line-height: 75px;
-    margin-bottom: 50px;
-    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 100px;
+    margin-bottom: 25px;
+    font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
   }
 }
 
-.service-heading {
-  margin: 15px 0;
-  text-transform: none;
-}
-
-#portfolio .portfolio-item {
-  right: 0;
-  margin: 0 0 15px;
-}
-
-#portfolio .portfolio-item .portfolio-link {
-  position: relative;
-  display: block;
-  max-width: 400px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-  opacity: 0;
-  background: rgba(254, 209, 54, 0.9);
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-  opacity: 1;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 20px;
-  margin-top: -12px;
-  text-align: center;
-  color: white;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
-  margin-top: -12px;
-}
-
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
-  margin: 0;
-}
-
-#portfolio .portfolio-item .portfolio-caption {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 25px;
-  text-align: center;
-  background-color: #fff;
-}
-
-#portfolio .portfolio-item .portfolio-caption h4 {
-  margin: 0;
-  text-transform: none;
-}
-
-#portfolio .portfolio-item .portfolio-caption p {
-  font-size: 16px;
-  font-style: italic;
-  margin: 0;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#portfolio * {
-  z-index: 2;
-}
-
-@media (min-width: 767px) {
-  #portfolio .portfolio-item {
-    margin: 0 0 30px;
+@media (max-width: 768px) {
+  header.masthead .intro-text {
+    text-align: right;
+    position: relative;
+    left: 0;
+    padding-top: 300px;
+    padding-bottom: 0px;
   }
-}
-
-.portfolio-modal {
-  padding-right: 0px !important;
-}
-
-.portfolio-modal .modal-dialog {
-  margin: 1rem;
-  max-width: 100vw;
-}
-
-.portfolio-modal .modal-content {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.portfolio-modal .modal-content h2 {
-  font-size: 3em;
-  margin-bottom: 15px;
-}
-
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content p.item-intro {
-  font-size: 16px;
-  font-style: italic;
-  margin: 20px 0 30px;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-.portfolio-modal .modal-content ul.list-inline {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px;
-}
-
-.portfolio-modal .modal-content button {
-  cursor: pointer;
-}
-
-.portfolio-modal .close-modal {
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.portfolio-modal .close-modal:hover {
-  opacity: 0.3;
-}
-
-.portfolio-modal .close-modal .lr {
-  /* Safari and Chrome */
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  /* IE 9 */
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #212529;
-}
-
-.portfolio-modal .close-modal .lr .rl {
-  /* Safari and Chrome */
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  /* IE 9 */
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  background-color: #212529;
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 28px;
+    font-weight: 425;
+    font-style: normal;
+    line-height: 50px;
+    margin-bottom: 25px;
+    font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 70px;
+    margin-bottom: 25px;
+    font-family: 'Snell Roundhand', 'Apple Chancery', 'Helvetica Neue', Helvetica, Arial, cursive;
+  }
 }
 
 .timeline {
@@ -401,9 +285,9 @@ header.masthead .intro-text .intro-heading {
   bottom: 0;
   left: 40px;
   width: 2px;
-  margin-left: -1.5px;
+  margin-left: 2.5px;
   content: '';
-  background-color: #e9ecef;
+  background-color: #f0e1d6;
 }
 
 .timeline > li {
@@ -447,20 +331,21 @@ header.masthead .intro-text .intro-heading {
   position: absolute;
   z-index: 100;
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin-left: 0;
   text-align: center;
-  color: white;
-  border: 7px solid #e9ecef;
+  color: black;
+  border: 7px solid #f0e1d6;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: #F7EFE9;
 }
 
 .timeline > li .timeline-image h4 {
-  font-size: 10px;
-  line-height: 14px;
-  margin-top: 12px;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  margin-top: 15px;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
@@ -490,10 +375,15 @@ header.masthead .intro-text .intro-heading {
 .timeline .timeline-heading h4 {
   margin-top: 0;
   color: inherit;
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .timeline .timeline-heading h4.subheading {
   text-transform: none;
+}
+
+.timeline .timeline-body {
+  font-family: 'open sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .timeline .timeline-body > ul,
@@ -517,8 +407,8 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li .timeline-image {
     left: 50%;
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     margin-left: -50px;
   }
   .timeline > li .timeline-image h4 {
@@ -541,8 +431,8 @@ header.masthead .intro-text .intro-heading {
     padding: 0 20px 20px;
   }
   .timeline > li .timeline-image {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     margin-left: -75px;
   }
   .timeline > li .timeline-image h4 {
@@ -563,8 +453,8 @@ header.masthead .intro-text .intro-heading {
     padding: 0 20px 20px 100px;
   }
   .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
+    width: 180px;
+    height: 180px;
     margin-left: -85px;
   }
   .timeline > li .timeline-image h4 {
@@ -573,27 +463,6 @@ header.masthead .intro-text .intro-heading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
-}
-
-.team-member {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.team-member img {
-  width: 225px;
-  height: 225px;
-  border: 7px solid #fff;
-}
-
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
-}
-
-.team-member p {
-  margin-top: 0;
 }
 
 section#contact {
@@ -625,34 +494,36 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-  border-color: #fed136;
+  border-color: #739287;
+  border: none;
+  border-bottom: 1px solid #ddd;
   box-shadow: none;
 }
 
 section#contact ::-webkit-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact :-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 18- */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact ::-moz-placeholder {
   font-weight: 700;
   color: #ced4da;
   /* Firefox 19+ */
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 section#contact :-ms-input-placeholder {
   font-weight: 700;
   color: #ced4da;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 footer {
@@ -664,7 +535,7 @@ footer span.copyright {
   font-size: 90%;
   line-height: 40px;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 footer ul.quicklinks {
@@ -672,7 +543,7 @@ footer ul.quicklinks {
   line-height: 40px;
   margin-bottom: 0;
   text-transform: none;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Linotype Didot', Georgia, 'Droid Serif','Times New Roman', Times, serif;
 }
 
 ul.social-buttons {
@@ -695,5 +566,5 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  background-color: #739287;
 }

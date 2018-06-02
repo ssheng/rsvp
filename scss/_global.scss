@@ -1,7 +1,7 @@
 // Global styling for this template
 body {
   overflow-x: hidden;
-  @include body-font;
+  @include subheading-font;
 }
 
 p {
@@ -29,12 +29,18 @@ h6 {
   @include heading-font;
 }
 
+
 section {
   padding: 100px 0;
   h2.section-heading {
-    font-size: 40px;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 38px;
     margin-top: 0;
     margin-bottom: 15px;
+  }
+  h2::first-letter { 
+    font-size: 150%;
   }
   h3.section-subheading {
     font-size: 16px;
@@ -42,7 +48,7 @@ section {
     font-style: italic;
     margin-bottom: 75px;
     text-transform: none;
-    @include serif-font;
+    @include subheading-font;
   }
 }
 @media(min-width:768px) {
@@ -54,11 +60,13 @@ section {
 // Button Styles
 .btn {
   @include heading-font;
-  font-weight: 700;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 10px;
 }
 
 .btn-xl {
-  font-size: 18px;
+  font-size: 22px;
   padding: 20px 40px;
 }
 
@@ -74,7 +82,7 @@ section {
   }
   &:active,
   &:focus {
-    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+    box-shadow: 0 0 0 0.2rem #556e669f !important;
   }
 }
 

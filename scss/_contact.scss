@@ -22,6 +22,8 @@ section#contact {
   }
   .form-control:focus {
     border-color: $primary;
+    border: none;
+    border-bottom: 1px solid #ddd;
     box-shadow: none;
   }
   ::-webkit-input-placeholder {

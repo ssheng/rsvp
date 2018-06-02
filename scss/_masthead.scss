@@ -1,49 +1,86 @@
 // Styling for the masthead
 header.masthead {
   text-align: center;
-  color: turquoise;
-  background-image: url('https://storage.googleapis.com/rsvp-resources/banner-2.jpg');
+  background-image: url('https://storage.googleapis.com/rsvp-resources/038-s.jpg');
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
+  background-position: left center;
+  background-size: 100% auto;
+  height: 100%;
+  width: 100%;
   @include background-cover;
   .intro-text {
+    text-align: left;
+    position: relative;
+    left: 425px;
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 200px;
     .intro-lead-in {
       font-size: 22px;
-      font-style: italic;
+      font-style: normal;
       line-height: 22px;
       margin-bottom: 25px;
-      @include serif-font;
+      color: #739287;
+      @include subheading-font;
     }
     .intro-heading {
-      font-size: 50px;
+      font-size: 70px;
       font-weight: 700;
-      line-height: 50px;
+      line-height: 70px;
       margin-bottom: 25px;
-      @include heading-font;
+      color: #1D4568;
+      @include script-font;
     }
   }
 }
 @media(min-width:768px) {
   header.masthead {
+    padding-top: 175px;
+    padding-bottom: 0px;
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
+      padding-top: 175px;
+      padding-bottom: 300px;
       .intro-lead-in {
-        font-size: 40px;
-        font-style: italic;
+        font-size: 35px;
+        font-style: normal;
         line-height: 40px;
         margin-bottom: 25px;
-        @include serif-font;
+        @include subheading-font;
       }
       .intro-heading {
-        font-size: 75px;
+        font-size: 95px;
         font-weight: 700;
-        line-height: 75px;
-        margin-bottom: 50px;
-        @include heading-font;
+        line-height: 100px;
+        margin-bottom: 25px;
+        @include script-font;
+      }
+    }
+  }
+}
+
+@media(max-width:768px) {
+  header.masthead {
+
+    .intro-text {
+      text-align: right;
+      position: relative;
+      left:0;
+      padding-top: 300px;
+      padding-bottom: 0px;
+      .intro-lead-in {
+        font-size: 28px;
+        font-weight: 425;
+        font-style: normal;
+        line-height: 50px;
+        margin-bottom: 25px;
+        @include subheading-font;
+      }
+      .intro-heading {
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 70px;
+        margin-bottom: 25px;
+        @include script-font;
       }
     }
   }
