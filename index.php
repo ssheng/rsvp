@@ -7,7 +7,7 @@ use Rsvp\DataModel\Datastore;
 
 //$id = ltrim($_SERVER['REQUEST_URI'], '/');
 $datastore = new Datastore('wedding-rsvp-201609');
-$rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
+$rsvp = $datastore->read('wyJ5U22I1EGSTT89XvYZ9w==');
 
 $partySelect = array('', '', '', '');
 $sailSelect = array('', '');
@@ -49,6 +49,7 @@ if ($rsvp) {
   <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet" type='text/css'>
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
+  <link rel="icon" href="https://storage.googleapis.com/rsvp-resources/logo-1.png">
 </head>
 <body id="page-top">
   <!-- Navigation -->
@@ -184,32 +185,32 @@ if ($rsvp) {
             You are cordially invited to
           </h3>
           <h1 class="section-heading">Renee & Sean's Wedding</h1>
+          <h3 class="invitation-subheading text-muted">Saturday, October 6, 2018 10AM - 6PM</h3>
           <h3 class="invitation-subheading text-muted">
-            Saturday, October 6<sup>th</sup>, 2018 10AM - 6PM
-            <br/>
-            <br/>Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
-            <br/>
-            <br/>
+            <a href="https://www.google.com/maps/place/Merriman's+Maui/@20.9984123,-156.6693332,17z/data=!3m1!4b1!4m5!3m4!1s0x7eaad44b62d8196b:0xe2817ef1b6cae084!8m2!3d20.9984073!4d-156.6671445" target="_blank">
+              Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
+            </a>
           </h3>
+          <h3 class="invitation-subheading text-muted">Will you be able to join us? Please R.S.V.P. by June 30, 2018.</h3>
+          <div class="form-group col-lg-12">
+          <div class="btn-group-lg text-center" role="group">
+              <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
+              &nbsp;&nbsp;&nbsp;
+              <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
+          </div>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-            <h3 class="invitation-subheading text-muted text-center"> Please R.S.V.P. by June 30<sup>th</sup> 2018.</h3>
-              <div class="btn-toolbar" role="group">
-                <label class="invitation-text">Will you be able to join us?&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
-                &nbsp;&nbsp;&nbsp;
-                <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="weddingAttendance">
-                <label class="form-check-label" for="weddingAttendance">
-                  Will be attending (Hidden)
-                </label>
-              </div>
+            <div class="form-check collapse">
+              <input class="form-check-input" type="checkbox" id="weddingAttendance">
+              <label class="form-check-label" for="weddingAttendance">
+                Will be attending (Hidden)
+              </label>
+            </div>
             <div class="form-group">
             <div class="collapse show" id="rsvpAcceptCollapse">
             <br>

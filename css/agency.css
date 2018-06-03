@@ -86,8 +86,8 @@ section h3.invitation-subheading {
 .invitation-text {
   font-size: 18px;
   font-weight: 400;
-  font-style: italic;
-  margin-bottom: 15px;
+  font-style: normal;
+  margin-bottom: 10px;
   text-transform: none;
   font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
 }
