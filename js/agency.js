@@ -47,4 +47,16 @@
     $(".navbar").removeClass("d-none");
   })
 
+  $('#rsvpYesButton').on('click', function(event) {
+    $('#rsvpAcceptCollapse').collapse('show')
+    $('#rsvpRejectCollapse').collapse('hide')
+    $('#weddingAttendance').prop('checked', true)
+  });
+
+  $('#rsvpNoButton').on('click', function(event) {
+    $('#rsvpAcceptCollapse').collapse('hide')
+    $('#rsvpRejectCollapse').collapse('show')
+    $('#weddingAttendance').prop('checked', false)
+  });
+
 })(jQuery); // End of use strict
