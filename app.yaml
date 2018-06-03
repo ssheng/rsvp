@@ -2,7 +2,7 @@ runtime: php
 env: flex
 
 runtime_config:
-  document_root: web
+  document_root: ./
 
 ## Uncomment for Cloud SQL
 # beta_settings:
