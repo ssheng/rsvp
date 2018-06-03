@@ -50,13 +50,15 @@
   $('#rsvpYesButton').on('click', function(event) {
     $('#rsvpAcceptCollapse').collapse('show')
     $('#rsvpRejectCollapse').collapse('hide')
-    $('#weddingAttendance').prop('checked', true)
+    $('#weddingInput').prop('checked', true)
+    $('#weddingInput').val = true
   });
 
   $('#rsvpNoButton').on('click', function(event) {
     $('#rsvpAcceptCollapse').collapse('hide')
     $('#rsvpRejectCollapse').collapse('show')
-    $('#weddingAttendance').prop('checked', false)
+    $('#weddingInput').prop('checked', false)
+    $('#weddingInput').val = false
   });
 
 })(jQuery); // End of use strict

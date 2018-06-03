@@ -7,7 +7,7 @@ use Rsvp\DataModel\Datastore;
 
 //$id = ltrim($_SERVER['REQUEST_URI'], '/');
 $datastore = new Datastore('wedding-rsvp-201609');
-$rsvp = $datastore->read('wyJ5U22I1EGSTT89XvYZ9w==');
+$rsvp = $datastore->read('83qnAk4WjEuf2xOCyFap1w==');
 
 $partySelect = array('', '', '', '');
 $sailSelect = array('', '');
@@ -41,9 +41,11 @@ if ($rsvp) {
   <meta name="author" content="">
   <title>Renee & Sean</title>
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
   <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> -->
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet" type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet" type='text/css'>
@@ -205,9 +207,9 @@ if ($rsvp) {
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-            <div class="form-check collapse">
-              <input class="form-check-input" type="checkbox" id="weddingAttendance">
-              <label class="form-check-label" for="weddingAttendance">
+            <div class="form-check">
+              <input class="form-check-input" checked="true" type="checkbox" id="weddingInput">
+              <label class="form-check-label" for="weddingInput">
                 Will be attending (Hidden)
               </label>
             </div>
@@ -219,7 +221,7 @@ if ($rsvp) {
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="invitation-text">How many people in your party will be joining?</label>
-                    <select class="custom-select">
+                    <select id="partyInput" class="custom-select">
                       <option value="1" <?php echo $partySelect[1]; ?>>One (only myself)</option>
                       <option value="2" <?php echo $partySelect[2]; ?>>Two (including myself / ourselves)</option>
                       <option value="3" <?php echo $partySelect[3]; ?>>Three (including myself)</option>
@@ -228,7 +230,7 @@ if ($rsvp) {
                   </div>
                   <div class="form-group">
                     <label class="invitation-text">Will you & your guest be joining us for the sunset sail?</label><br/>
-                    <select class="custom-select">
+                    <select id="sailInput" class="custom-select">
                       <option value="" disabled="disabled" selected="selected">Choose an option</option>
                       <option value="1" <?php echo $sailSelect[1]; ?>>Yes</option>
                       <option value="2" <?php echo $sailSelect[2]; ?>>No</option>
@@ -239,7 +241,7 @@ if ($rsvp) {
                 <div class="col-md-6">
                   <label class="invitation-text">Anything we should know about?</label>
                   <div class="form-group">
-                    <textarea class="form-control" id="message" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ><?php echo $miscText; ?></textarea>
+                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>

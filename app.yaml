@@ -4,6 +4,28 @@ env: flex
 runtime_config:
   document_root: ./
 
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /src
+  static_dir: src
+
+- url: /vendor/font-awesome/css/font-awesome.min.css
+  static_dir: vendor/font-awesome/css/font-awesome.min.css
+
+- url: /vendor/bootstrap/js/bootstrap.bundle.min.js
+  static_dir: vendor/bootstrap/js/bootstrap.bundle.min.js
+
+- url: /vendor/jquery-easing/jquery.easing.min.js
+  static_dir: vendor/jquery-easing/jquery.easing.min.js
+
+- url: /vendor/autoload.php
+  static_dir: vendor/autoload.php
+
 ## Uncomment for Cloud SQL
 # beta_settings:
 #   cloud_sql_instances: "INSTANCE_CONNECTION_NAME"
