@@ -7,12 +7,27 @@ use Rsvp\DataModel\Datastore;
 
 //$id = ltrim($_SERVER['REQUEST_URI'], '/');
 $datastore = new Datastore('wedding-rsvp-201609');
-$rsvp = $datastore->read('wyJ5U22I1EGSTT89XvYZ9w==');
+$rsvp = $datastore->read('NtIwsF38lkCz/8IPDYW/vw==');
 
 $partySelect = array('', '', '', '');
+$sailSelect = array('', '');
+$miscText = '';
 if ($rsvp) {
   if ($rsvp['party']) {
     $partySelect[$rsvp['party']] = 'selected';
+  }
+
+  if (!is_null($rsvp['sail'])) {
+    if ($rsvp['sail']) {
+      $sailSelect[1] = 'selected';
+    }
+    else {
+      $sailSelect[2] = 'selected';
+    }
+  }
+
+  if ($rsvp['misc']) {
+    $miscText = $rsvp['misc'];
   }
 }
 
@@ -166,13 +181,15 @@ if ($rsvp) {
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Hello, <?php echo $rsvp['invitees']; ?>!</h2>
           <h3 class="invitation-subheading text-muted">
-            You are cordially invited to </h3>
-            <h1 class="section-heading">Renee & Sean's Wedding</h1>
-            <h3 class="invitation-subheading text-muted"> Saturday, October 6<sup>th</sup>, 2018 10AM - 6PM
-            <br>
-            <br> Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
-            <br>
-            <br>
+            You are cordially invited to
+          </h3>
+          <h1 class="section-heading">Renee & Sean's Wedding</h1>
+          <h3 class="invitation-subheading text-muted">
+            Saturday, October 6<sup>th</sup>, 2018 10AM - 6PM
+            <br/>
+            <br/>Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
+            <br/>
+            <br/>
           </h3>
         </div>
       </div>
@@ -180,9 +197,9 @@ if ($rsvp) {
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-            <h3 class="invitation-subheading text-muted"> Please R.S.V.P. by June 30<sup>th</sup> 2018.</h3>
-              <div class="btn-toolbar" role="group" aria-label="Basic example">
-                <label>Will you be able to join us?&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <h3 class="invitation-subheading text-muted text-center"> Please R.S.V.P. by June 30<sup>th</sup> 2018.</h3>
+              <div class="btn-toolbar" role="group">
+                <label class="invitation-text">Will you be able to join us?&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
                 &nbsp;&nbsp;&nbsp;
                 <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
@@ -199,18 +216,6 @@ if ($rsvp) {
             <br>
               <div class="row">
                 <div class="col-md-6">
-                  <!-- <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <input class="form-control" id="guests" type="text" placeholder="# of guests *" required="required" data-validation-required-message="How many guests will you bring (not include yourself/yourselves)?">
-                    <p class="help-block text-danger"></p>
-                  </div> -->
                   <div class="form-group">
                     <label class="invitation-text">How many people in your party will be joining?</label>
                     <select class="custom-select">
@@ -224,24 +229,16 @@ if ($rsvp) {
                     <label class="invitation-text">Will you & your guest be joining us for the sunset sail?</label><br/>
                     <select class="custom-select">
                       <option value="" disabled="disabled" selected="selected">Choose an option</option>
-                      <option value="1" >Yes</option>
-                      <option value="2" >No</option>
-                    </select>
-                        <!--
-                      <div class="dropdown">
-                      <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Yes</button>
-                        <button type="button" class="btn btn-secondary">No</button>
-                      </div>
-                       </div>
-                       -->                  
+                      <option value="1" <?php echo $sailSelect[1]; ?>>Yes</option>
+                      <option value="2" <?php echo $sailSelect[2]; ?>>No</option>
+                    </select>         
                   </div>
                 </div>
 
                 <div class="col-md-6">
-                  <label class="invitation-text">Anything you would like us to know?</label>
+                  <label class="invitation-text">Anything we should know about?</label>
                   <div class="form-group">
-                    <textarea class="form-control" id="message" rows="4" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ></textarea>
+                    <textarea class="form-control" id="message" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>

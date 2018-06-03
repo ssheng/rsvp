@@ -32,11 +32,11 @@ class Datastore
         'name' => 'string',
         'invitee' => 'string',
         'party' => 'integer',
-        'wedding_rsvp' => 'bool',
-        'cruise_rsvp' => 'bool',
-        'diet_restrictions' => 'string',
-        'created_on' => 'string',
-        'updated_on' => 'string',
+        'wedding' => 'bool',
+        'sail' => 'bool',
+        'misc' => 'string',
+        'created' => 'string',
+        'updated' => 'string',
     ];
 
     public function __construct($projectId)
