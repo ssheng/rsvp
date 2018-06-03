@@ -32,6 +32,14 @@ h6 {
 
 section {
   padding: 100px 0;
+  h1.section-heading {
+    font-weight: 550;
+    font-size: 55px;
+    color: $navy;
+    margin-top: 0;
+    margin-bottom: 15px;
+    @include script-font;
+  }
   h2.section-heading {
     font-weight: lighter;
     font-style: italic;
@@ -50,11 +58,29 @@ section {
     text-transform: none;
     @include subheading-font;
   }
+  h3.invitation-subheading {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-transform: none;
+    @include subheading-font;
+  }
 }
 @media(min-width:768px) {
   section {
     padding: 150px 0;
   }
+}
+
+// Label Styles
+.invitation-text {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-transform: none;
+  @include subheading-font;
 }
 
 // Button Styles
@@ -88,12 +114,12 @@ section {
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary;
+  background: #B4D5FF;
   text-shadow: none;
 }
 
 ::selection {
-  background: $primary;
+  background: #ACCEF7;
   text-shadow: none;
 }
 

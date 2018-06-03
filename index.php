@@ -97,7 +97,7 @@ if ($rsvp) {
               </div>
             </li>
             <li class="timeline-inverted">
-             ß <div class="timeline-image">
+              <div class="timeline-image">
                 <img class="rounded-circle img-fluid" src="https://storage.googleapis.com/rsvp-resources/DroneView.jpg" alt="">
               </div>
               <div class="timeline-panel">
@@ -165,10 +165,14 @@ if ($rsvp) {
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Hello, <?php echo $rsvp['invitees']; ?>!</h2>
-          <h3 class="section-subheading text-muted">
-            We would like to invite you to our wedding
-            <br> When: Sat, Oct. 6, 2018
-            <br> Where: Merriman's Maui, Hawaii
+          <h3 class="invitation-subheading text-muted">
+            You are cordially invited to </h3>
+            <h1 class="section-heading">Renee & Sean's Wedding</h1>
+            <h3 class="invitation-subheading text-muted"> Saturday, October 6<sup>th</sup>, 2018 10AM - 6PM
+            <br>
+            <br> Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
+            <br>
+            <br>
           </h3>
         </div>
       </div>
@@ -176,9 +180,11 @@ if ($rsvp) {
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-              <div class="btn-group-lg" role="group" aria-label="Basic example">
-                <label>Will you be able to attend the wedding?</label>
+            <h3 class="invitation-subheading text-muted"> Please R.S.V.P. by June 30<sup>th</sup> 2018.</h3>
+              <div class="btn-toolbar" role="group" aria-label="Basic example">
+                <label>Will you be able to join us?&nbsp;&nbsp;&nbsp;&nbsp;</label>
                 <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
+                &nbsp;&nbsp;&nbsp;
                 <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
               </div>
               <div class="form-check">
@@ -189,6 +195,8 @@ if ($rsvp) {
               </div>
             <div class="form-group">
             <div class="collapse show" id="rsvpAcceptCollapse">
+            <br>
+            <br>
               <div class="row">
                 <div class="col-md-6">
                   <!-- <div class="form-group">
@@ -204,37 +212,47 @@ if ($rsvp) {
                     <p class="help-block text-danger"></p>
                   </div> -->
                   <div class="form-group">
-                    <label>How many people in your party will be joining?</label>
+                    <label class="invitation-text">How many people in your party will be joining?</label>
                     <select class="custom-select">
-                      <option value="1" <?php echo $partySelect[1]; ?>>One</option>
-                      <option value="2" <?php echo $partySelect[2]; ?>>Two</option>
-                      <option value="3" <?php echo $partySelect[3]; ?>>Three</option>
-                      <option vlaue="4" <?php echo $partySelect[4]; ?>>Four</option>
+                      <option value="1" <?php echo $partySelect[1]; ?>>One (only myself)</option>
+                      <option value="2" <?php echo $partySelect[2]; ?>>Two (including myself / ourselves)</option>
+                      <option value="3" <?php echo $partySelect[3]; ?>>Three (including myself)</option>
+                      <option vlaue="4" <?php echo $partySelect[4]; ?>>Four (including myself)</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <div class="dropdown">
-                      <label>Will you & your guest being joining us for the sunset sail?</label><br/>
+                    <label class="invitation-text">Will you & your guest be joining us for the sunset sail?</label><br/>
+                    <select class="custom-select">
+                      <option value="" disabled="disabled" selected="selected">Choose an option</option>
+                      <option value="1" >Yes</option>
+                      <option value="2" >No</option>
+                    </select>
+                        <!--
+                      <div class="dropdown">
                       <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" class="btn btn-secondary">Yes</button>
                         <button type="button" class="btn btn-secondary">No</button>
                       </div>
-                    </div>
+                       </div>
+                       -->                  
                   </div>
                 </div>
+
                 <div class="col-md-6">
-                  <label>Anything you would like us to know? e.g. allergies, dietary restrictions, accommodation for kids, etc.</label>
+                  <label class="invitation-text">Anything you would like us to know?</label>
                   <div class="form-group">
-                    <textarea class="form-control" id="message" placeholder="Message" ></textarea>
+                    <textarea class="form-control" id="message" rows="4" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="collapse" id="rsvpRejectCollapse">
+            <div class="collapse invitation-text" id="rsvpRejectCollapse">
               Welp, bye.
             </div>
             <div class="clearfix"></div>
+            <br>
+            <br>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
               <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Submit</button>
