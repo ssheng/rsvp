@@ -4,6 +4,7 @@ $(function() {
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
+      event.preventDefault();
     },
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
@@ -12,7 +13,8 @@ $(function() {
       var party = $("select#partySelect").val();
       var sail = $("select#sail").val();
       var misc = $("textarea#miscInput").val();
-      alert(party);
+      alert(wedding);
+      //alert("wedding=" + wedding + ', party=' + party + ', sail=' + sail + ', misc=' + misc);
 
       // var firstName = name; // For Success/Failure Message
       // // Check for white space in name for Success/Fail message

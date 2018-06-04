@@ -5,18 +5,25 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Rsvp\DataModel\Datastore;
 
-//$id = ltrim($_SERVER['REQUEST_URI'], '/');
-$datastore = new Datastore('wedding-rsvp-201609');
-$rsvp = $datastore->read('wyJ5U22I1EGSTT89XvYZ9w==');
-
+// Form variables
 $partySelect = array('', '', '', '');
 $sailSelect = array('', '');
 $miscText = '';
+$deadlineLabel = 'June 30, 2018';
+
+$id = rtrim(ltrim($_SERVER['REQUEST_URI'], '/'), '?');
+if ($id) {
+  $datastore = new Datastore('wedding-rsvp-201609');
+  $rsvp = $datastore->read($id);
+} else {
+  $rsvp = null;
+}
+
 if ($rsvp) {
+  $display = '';
   if ($rsvp['party']) {
     $partySelect[$rsvp['party']] = 'selected';
   }
-
   if (!is_null($rsvp['sail'])) {
     if ($rsvp['sail']) {
       $sailSelect[1] = 'selected';
@@ -25,14 +32,17 @@ if ($rsvp) {
       $sailSelect[2] = 'selected';
     }
   }
-
   if ($rsvp['misc']) {
     $miscText = $rsvp['misc'];
   }
+  if ($rsvp['deadline']) {
+    $deadlineLabel = $rsvp['deadline'];
+  }
+} else {
+  $display = 'd-none';
 }
-
 ?>
-
+<?php echo $id ?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -40,9 +50,10 @@ if ($rsvp) {
   <meta name="description" content="">
   <meta name="author" content="">
   <title>Renee & Sean</title>
+  <!-- Icon -->
+  <link rel="icon" href="https://storage.googleapis.com/rsvp-resources/logo-1.png">
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
   <!-- Custom fonts for this template -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -50,7 +61,6 @@ if ($rsvp) {
   <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet" type='text/css'>
   <!-- Custom styles for this template -->
   <link href="css/agency.min.css" rel="stylesheet">
-  <link rel="icon" href="https://storage.googleapis.com/rsvp-resources/logo-1.png">
 </head>
 <body id="page-top">
   <!-- Navigation -->
@@ -66,7 +76,7 @@ if ($rsvp) {
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?php echo $display ?>">
             <a class="nav-link js-scroll-trigger" href="#rsvp">RSVP</a>
           </li>
           <li class="nav-item">
@@ -82,7 +92,7 @@ if ($rsvp) {
       <div class="intro-text">
         <div class="intro-heading">Renee & Sean</div>
         <div class="intro-lead-in">Maui, Hawaii | 2018.10.6 &nbsp;&nbsp;
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#rsvp">RSVP</a>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger <?php echo $display ?>" href="#rsvp">RSVP</a>
         </div>
       </div>
     </div>
@@ -169,7 +179,7 @@ if ($rsvp) {
     </div>
   </section>
   <!-- RSVP -->
-  <section id="rsvp" >
+  <section id="rsvp" class="<?php echo $display ?>">
     <!--class="bg-light"-->
     <style>
     #rsvp {
@@ -192,11 +202,10 @@ if ($rsvp) {
               Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
             </a>
           </h3>
-          <h3 class="invitation-subheading text-muted">Will you be able to join us? Please R.S.V.P. by June 30, 2018.</h3>
+          <h3 class="invitation-subheading text-muted">Will you be able to join us? Please R.S.V.P. by <?php echo $deadlineLabel ?>.</h3>
           <div class="form-group col-lg-12">
           <div class="btn-group-lg text-center" role="group">
               <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
-              &nbsp;&nbsp;&nbsp;
               <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
           </div>
           </div>
@@ -206,16 +215,14 @@ if ($rsvp) {
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-            <div class="form-check">
+            <div class="form-check d-none">
               <input class="form-check-input" checked="true" type="checkbox" id="weddingInput">
               <label class="form-check-label" for="weddingInput">
                 Will be attending (Hidden)
               </label>
             </div>
-            <div class="form-group">
+            <div class="form-group"><br/><br/>
             <div class="collapse show" id="rsvpAcceptCollapse">
-            <br>
-            <br>
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -246,8 +253,8 @@ if ($rsvp) {
                 </div>
               </div>
             </div>
-            <div class="collapse invitation-text" id="rsvpRejectCollapse">
-              Welp, bye.
+            <div class="col-lg-12 collapse" id="rsvpRejectCollapse">
+              <h3 class="col-lg-12 invitation-subheading text-muted text-center">Thank you for letting us know. Hopefully we can catch up again soon!</h3>
             </div>
             <div class="clearfix"></div>
             <br>
@@ -282,7 +289,7 @@ if ($rsvp) {
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Saturday, Oct. 6, 2018</h4>
           <p class="text-muted"> The average maximum daytime temperature in Kapalua, Maui in October is warm 27 &deg;C (81 &deg;F) with moderate heat & humidity.</p>
@@ -290,7 +297,7 @@ if ($rsvp) {
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
-            <i class="fa fa-black-tie fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Dress Code</h4>
           <p class="text-muted">Our <font color=#008080>style</font> is going to be <font color=#008080>Hawaiian (casual comfort)</font>! Just relax, enjoy the sunshine and beautiful ocean views! The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
