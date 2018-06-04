@@ -344,12 +344,12 @@ if ($rsvp) {
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
-                <i class="fa fa-facebook"></i>
+                <i class="fab fa-facebook"></i>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                <i class="fa fa-weixin"></i>
+                <i class="fab fa-weixin"></i>
               </a>
             </li>
           </ul>
