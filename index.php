@@ -42,7 +42,6 @@ if ($rsvp) {
   $display = 'd-none';
 }
 ?>
-<?php echo $id ?>
 <html lang="en">
 <head>
   <meta charset="utf-8">
