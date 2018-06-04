@@ -5,6 +5,9 @@ runtime_config:
   document_root: ./
 
 handlers:
+- url: /
+  script: index.php
+
 - url: /css
   static_dir: css
 
@@ -14,17 +17,32 @@ handlers:
 - url: /src
   static_dir: src
 
-- url: /vendor/font-awesome/css/font-awesome.min.css
-  static_dir: vendor/font-awesome/css/font-awesome.min.css
+- url: /vendor/bootstrap/js
+  static_dir: vendor/bootstrap/js
 
-- url: /vendor/bootstrap/js/bootstrap.bundle.min.js
-  static_dir: vendor/bootstrap/js/bootstrap.bundle.min.js
+- url: /vendor/jquery
+  static_dir: vendor/jquery
 
-- url: /vendor/jquery-easing/jquery.easing.min.js
-  static_dir: vendor/jquery-easing/jquery.easing.min.js
+# - url: /(.*\.js)
+#   mime_type: text/javascript
+#   static_files: vendor/\1
+#   upload: vendor/(.*\.js)
 
-- url: /vendor/autoload.php
-  static_dir: vendor/autoload.php
+# - url: /vendor/font-awesome/css/font-awesome.min.css
+#   static_files: vendor/font-awesome/css/font-awesome.min.css
+#   upload: vendor/font-awesome/css/font-awesome.min.css
+
+# - url: /vendor/bootstrap/js/bootstrap.bundle.min.js
+#   static_files: vendor/bootstrap/js/bootstrap.bundle.min.js
+#   upload: vendor/bootstrap/js/bootstrap.bundle.min.js
+
+# - url: /vendor/jquery-easing/jquery.easing.min.js
+#   static_files: vendor/jquery-easing/jquery.easing.min.js
+#   upload: vendor/jquery-easing/jquery.easing.min.js
+
+# - url: /vendor/autoload.php
+#   static_files: vendor/autoload.php
+#   upload: vendor/autoload.php
 
 ## Uncomment for Cloud SQL
 # beta_settings:
