@@ -25,7 +25,7 @@ if ($rsvp) {
     $partySelect[$rsvp['party']] = 'selected';
   }
   if (!is_null($rsvp['sail'])) {
-    if ($rsvp['sail']) {
+    if ($rsvp['sail'] == 'true') {
       $sailSelect[1] = 'selected';
     }
     else {
@@ -214,39 +214,38 @@ if ($rsvp) {
         <div class="col-lg-12">
           <form id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-            <div class="form-check d-none">
-              <input class="form-check-input" checked="true" type="checkbox" id="weddingInput">
-              <label class="form-check-label" for="weddingInput">
-                Will be attending (Hidden)
-              </label>
+              <div class="form-check d-none">
+                <input class="form-control form-check-input" checked="true" type="checkbox" id="weddingInput"></input>
+                <input class="form-control" id="rsvpId" value="<?php echo $id ?>"></input>
+              </div>
             </div>
-            <div class="form-group"><br/><br/>
             <div class="collapse show" id="rsvpAcceptCollapse">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="invitation-text">How many people in your party will be joining?</label>
-                    <select id="partyInput" class="custom-select">
-                      <option value="1" <?php echo $partySelect[1]; ?>>One (only myself)</option>
-                      <option value="2" <?php echo $partySelect[2]; ?>>Two (including myself / ourselves)</option>
-                      <option value="3" <?php echo $partySelect[3]; ?>>Three (including myself)</option>
-                      <option vlaue="4" <?php echo $partySelect[4]; ?>>Four (including myself)</option>
+                    <label class="invitation-text">How many people in your party (including yourself) will be joining?</label>
+                    <select id="partyInput" class="form-control custom-select">
+                      <option value="1" <?php echo $partySelect[1]; ?>>One</option>
+                      <option value="2" <?php echo $partySelect[2]; ?>>Two</option>
+                      <option value="3" <?php echo $partySelect[3]; ?>>Three</option>
+                      <option value="4" <?php echo $partySelect[4]; ?>>Four</option>
                     </select>
+                    <p class="help-block text-danger"></p>
                   </div>
                   <div class="form-group">
-                    <label class="invitation-text">Will you & your guest be joining us for the sunset sail?</label><br/>
-                    <select id="sailInput" class="custom-select">
-                      <option value="" disabled="disabled" selected="selected">Choose an option</option>
-                      <option value="1" <?php echo $sailSelect[1]; ?>>Yes</option>
-                      <option value="2" <?php echo $sailSelect[2]; ?>>No</option>
-                    </select>         
+                    <label class="invitation-text">Will you & your guest be joining us for the <a href="#timeline">sunset sail?</a></label><br/>
+                    <select id="sailInput" class="form-control custom-select">
+                      <!-- <option value="" disabled="disabled" selected="selected">Choose an option</option> -->
+                      <option value="true" <?php echo $sailSelect[1]; ?>>Yes</option>
+                      <option value="false" <?php echo $sailSelect[2]; ?>>No</option>
+                    </select>
+                    <p class="help-block text-danger"></p>
                   </div>
                 </div>
-
                 <div class="col-md-6">
-                  <label class="invitation-text">Anything we should know about?</label>
                   <div class="form-group">
-                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc." ><?php echo $miscText; ?></textarea>
+                    <label class="invitation-text">Anything we should know about?</label>
+                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc."><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>

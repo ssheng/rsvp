@@ -1,26 +1,45 @@
 <?php
+require __DIR__ . './../vendor/autoload.php';
+use Rsvp\DataModel\Datastore;
+
+// Fails the call by default
+http_response_code(500);
+
 // Check for empty fields
-if(empty($_POST['name'])      ||
-   empty($_POST['email'])     ||
-   empty($_POST['phone'])     ||
-   empty($_POST['message'])   ||
-   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-   {
-   echo "No arguments Provided!";
-   return false;
-   }
-   
-$name = strip_tags(htmlspecialchars($_POST['name']));
-$email_address = strip_tags(htmlspecialchars($_POST['email']));
-$phone = strip_tags(htmlspecialchars($_POST['phone']));
-$message = strip_tags(htmlspecialchars($_POST['message']));
-   
-// Create the email and send the message
-$to = 's3sheng@gmail.com'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-$headers .= "Reply-To: $email_address";   
-mail($to,$email_subject,$email_body,$headers);
-return true;         
+// if(empty($_POST['id']) ||
+//    empty($_POST['wedding']) ||
+//    empty($_POST['party']) ||
+//    empty($_POST['sail']) ||
+//    empty($_POST['misc']))
+// {
+//   echo "No arguments Provided!";
+//   return false;
+// }
+
+$id = $_POST['id'];
+$wedding = $_POST['wedding'];
+$party = (int)$_POST['party'];
+$sail = $_POST['sail'];
+$misc = strip_tags(htmlspecialchars($_POST['misc']));
+
+// $id = 'mZDMEMxx';
+// $wedding = true;
+// $party = 3;
+// $sail = true;
+// $misc = 'Hello World!';
+
+$datastore = new Datastore('wedding-rsvp-201609');
+$rsvp = $datastore->read($id);
+$rsvp['name'] = $id;
+$rsvp['wedding'] = $wedding;
+$rsvp['party'] = $party;
+$rsvp['sail'] = $sail;
+$rsvp['misc'] = $misc;
+
+$result = $datastore->update($rsvp);
+if ($result == 1) {
+  http_response_code(200);  
+}
+
+return $result;
 ?>

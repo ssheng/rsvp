@@ -30,7 +30,7 @@ class Datastore
     private $datastore;
     protected $columns = [
         'name' => 'string',
-        'invitee' => 'string',
+        'invitees' => 'string',
         'party' => 'integer',
         'wedding' => 'bool',
         'sail' => 'bool',
@@ -71,7 +71,6 @@ class Datastore
         $transaction = $this->datastore->transaction();
         $key = $this->datastore->key('rsvp', $rsvp['name']);
         $task = $transaction->lookup($key);
-        unset($rsvp['name']);
         $entity = $this->datastore->entity($key, $rsvp);
         $transaction->upsert($entity);
         $transaction->commit();
