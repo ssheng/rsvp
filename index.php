@@ -247,7 +247,7 @@ if ($rsvp) {
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="invitation-text">Anything we should know about?</label>
-                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, accommodation for kids, etc."><?php echo $miscText; ?></textarea>
+                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, guest names, etc."><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -334,7 +334,7 @@ if ($rsvp) {
             <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Gift Registry</h4>
-          <p class="text-muted">We value your presence more than the presents. We appreciate that our families and friends traveling a long distance to celebrate our special moment, we could not ask for more.</p>
+          <p class="text-muted">We value your presence more than the presents. We appreciate that our families and friends traveling a long distance to be with us for our special moment, we could not ask for more.</p>
         </div>
       </div>
     </div>
