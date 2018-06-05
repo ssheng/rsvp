@@ -133,7 +133,7 @@ if ($rsvp) {
                   <h4 class="subheading">Cocktail Hour</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Good time to take pictures, socializing and exploring the deck and the grassy overlook.</p>
+                  <p class="text-muted">Good time to have a drink, relax, and enjoy the deck and the grassy overlook. Take pictures, catch up with old friends and meet new ones. We will have an open bar for you order your favourite drinks.</p>
                 </div>
               </div>
             </li>
@@ -147,7 +147,8 @@ if ($rsvp) {
                   <h4 class="subheading">Reception</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Please join our lunch reception.</p>
+                  <!-- <p class="text-muted">Please join our lunch reception.</p> -->
+                  <p class="text-muted">Join us for our lunch reception served by Merriman's Kapalua. Please let us know if there is any dietary restrictions in the RSVP form below. Once we have the menu available, you will be able to select your course on this site.</p>
                 </div>
               </div>
             </li>
@@ -161,7 +162,7 @@ if ($rsvp) {
                   <h4 class="subheading">Sunset Sail</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Departure at Lahaina Harbor. Bring your camera in a zip lock bag and sunscreen. All guests names will be collected for boarding.</p>
+                  <p class="text-muted">Departure at Lahaina Harbor, we will sail into sea to continue our celebration. We were told the sail boat should cause minimal seasickness but pills will be provided at the harbour should you need one. We will need all guests full names prior to boarding due to local regulations (please fill in below).</p>
                 </div>
               </div>
             </li>
@@ -283,7 +284,7 @@ if ($rsvp) {
           </span>
           <h4 class="service-heading">Merriman's Maui (Kapalua)</h4>
           <h4 class="service-heading"><a href="https://www.google.com/maps/place/Merriman's+Maui/@20.9984123,-156.6693332,17z/data=!3m1!4b1!4m5!3m4!1s0x7eaad44b62d8196b:0xe2817ef1b6cae084!8m2!3d20.9984073!4d-156.6671445" target="_blank">1 Bay Club Pl, Lahaina, HI</a> </h4>
-          <p class="text-muted">There are a few parking spots in front of the restaurant. The restaurant also has a larger parking lot. When you turn onto Bay Club Pl, the parking lot is on your right hand side. </p>
+          <p class="text-muted">There is a small parking lot in front of the restaurant and a larger parking lot on the right hand side of when you first turn onto Bay Club Pl. Please plan sufficient travel time in case of heavy Saturday morning traffic.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -291,7 +292,7 @@ if ($rsvp) {
             <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Saturday, Oct. 6, 2018</h4>
-          <p class="text-muted"> The average maximum daytime temperature in Kapalua, Maui in October is warm 27 &deg;C (81 &deg;F) with moderate heat & humidity.</p>
+          <p class="text-muted">The average daytime temperature in Kapalua, Maui in October is warm 27 &deg;C (81 &deg;F) with moderate heat & humidity. The evening temperature is usuaully in the low 20s &deg;C (70s &deg;F).</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -299,7 +300,7 @@ if ($rsvp) {
             <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Dress Code</h4>
-          <p class="text-muted">Our <font color=#008080>style</font> is going to be <font color=#008080>Hawaiian (casual comfort)</font>! Just relax, enjoy the sunshine and beautiful ocean views! The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
+          <p class="text-muted">Our <font color=#008080>style</font> is going to be <font color=#008080>Hawaiian (casual comfort)</font>. We hope you can relax and enjoy the sunshine without a formal dress code. The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
         </div>
       </div>
       <div class="row text-center">
@@ -310,7 +311,7 @@ if ($rsvp) {
           </span>
           <h4 class="service-heading">Kahului Airport (OGG)</h4>
           <p class="text-muted">Kahului Airport (OGG) is the primary airport on the island of Maui.
-            <br>If you travel within Hawaiian islands, Kapalua Airport (JHM) is located on the west side of the Island of Maui, a short distance from the resort destinations.
+            <br>If you travel inter Hawaiian islands, Kapalua Airport (JHM) located on the west side of Maui provides a short distance from the resort destinations.
           </p>
         </div>
         <div class="col-md-4">
@@ -318,13 +319,13 @@ if ($rsvp) {
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-suitcase fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Tourism</h4>
+          <h4 class="service-heading">Travel</h4>
           <p class="text-muted"><b>Nearby Hotel Zones:</b> Lahaina, Kaanapali & Kapalua.
-            <br><b>Eating & drinking:</b> Loco Moco, Kalua Pork, Poke, Shave Ice, Acai Bowl, Mai Tai and many more!!!
-            <br><b>Best Sunrise at Haleakala National Park: </b>
+            <br><b>Eating & drinking:</b> Loco Moco, Kalua Pork, Poke, Shave Ice, Acai Bowl, Mai Tai and more.
+            <br><b>Sunrise at Haleakala National Park: </b>
             Make sunrise viewing reservations  <font color=#008080>(required)</font> at <a href="https://www.recreation.gov/tourParkDetail.do?contractCode=NRSO&parkId=147940" target="_blank">recreation.gov</a>, up to <font color=#008080>60 days</font> in advance.
             <br><b>Snorkeling spots:</b>
-            Molokini, Black Rock, Turtle Town, Ulua Beach...
+            Molokini, Black Rock, Turtle Town, Ulua Beach.
           </p>
         </div>
         <div class="col-md-4">
@@ -333,7 +334,7 @@ if ($rsvp) {
             <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Gift Registry</h4>
-          <p class="text-muted">Your presence is present enough. Our families and friends travel so far, thus we will not have a gift registry.</p>
+          <p class="text-muted">We value your presence more than the presents. We appreciate that our families and friends traveling a long distance to celebrate our special moment, we could not ask for more.</p>
         </div>
       </div>
     </div>
@@ -342,11 +343,11 @@ if ($rsvp) {
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <span class="copyright">Copyright &copy; R&S Wedding 2018</span>
           <img class="img-fluid" src="https://storage.googleapis.com/rsvp-resources/logo-1.png" alt="" width="45" height="45" >
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <ul class="list-inline social-buttons">
             <li class="list-inline-item">
               <a href="#">
@@ -359,7 +360,7 @@ if ($rsvp) {
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
