@@ -14,8 +14,6 @@ $(function() {
       var party = $("select#partyInput").val();
       var sail = $("select#sailInput").val();
       var misc = $("textarea#miscInput").val();
-      //alert('hi');
-      alert('id=' + id + ', wedding=' + wedding + ', party=' + party + ', sail=' + sail + ', misc=' + misc);
 
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
