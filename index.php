@@ -118,7 +118,8 @@ if ($rsvp) {
                   <h4 class="subheading">Ceremony</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Outdoor on Kapalua Bay Deck with panoramic ocean views.</p>
+                  <!-- <p class="text-muted">Outdoor on Kapalua Bay Deck with panoramic ocean views.</p> -->
+                  <p class="text-muted">The ceremony will take place at the ocean front deck overlooking the Kapalua Bay. Starting sharp at fifteen past then, please allow ample travel time and arrive the venue before 10:00 AM. Parkings are available outside the venue. Head to the sign-in table and proceed to the outdoor decking area.</p>
                 </div>
               </div>
             </li>
@@ -132,7 +133,7 @@ if ($rsvp) {
                   <h4 class="subheading">Cocktail Hour</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">This is a good time taking some pictures, socializing and exploring the deck and the grassy overlook.</p>
+                  <p class="text-muted">Good time to take pictures, socializing and exploring the deck and the grassy overlook.</p>
                 </div>
               </div>
             </li>
