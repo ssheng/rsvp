@@ -90,8 +90,8 @@ if ($rsvp) {
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading">Renee & Sean</div>
-        <div class="intro-lead-in">Maui, Hawaii | 2018.10.6 &nbsp;&nbsp;
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger <?php echo $display ?>" href="#rsvp">RSVP</a>
+        <div class="intro-lead-in">Maui, Hawaii | 2018.10.6</div>
+         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger <?php echo $display ?>" href="#rsvp">RSVP</a>
         </div>
       </div>
     </div>
@@ -119,7 +119,7 @@ if ($rsvp) {
                 </div>
                 <div class="timeline-body">
                   <!-- <p class="text-muted">Outdoor on Kapalua Bay Deck with panoramic ocean views.</p> -->
-                  <p class="text-muted">The ceremony will take place at the ocean front deck overlooking the Kapalua Bay. Starting sharp at fifteen past then, please allow ample travel time and arrive the venue before 10:00 AM. Parkings are available outside the venue. Head to the sign-in table and proceed to the outdoor decking area.</p>
+                  <p class="text-muted">The ceremony will take place at the ocean front deck overlooking the Kapalua Bay. Starting sharp at fifteen past ten, please allow ample travel time and arrive the venue before 10:00 AM.</p>
                 </div>
               </div>
             </li>
@@ -162,7 +162,7 @@ if ($rsvp) {
                   <h4 class="subheading">Sunset Sail</h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Departure at Lahaina Harbor, we will sail into sea to continue our celebration. We were told the sail boat should cause minimal seasickness but pills will be provided at the harbour should you need one. We will need all guests full names prior to boarding due to local regulations (please fill in below).</p>
+                  <p class="text-muted">Departure at <a href="https://www.google.com/maps/place/675+Wharf+St,+Lahaina,+HI+96761/@20.8717721,-156.6789451,17z/data=!4m5!3m4!1s0x79552bb83fad7399:0x5588dff31b6c22d7!8m2!3d20.8719375!4d-156.6788271" target="_blank">Lahaina Harbor: 675 Wharf Street, Lahaina, HI 96761</a>, we will sail into sea to continue our celebration. We were told the sail boat should cause minimal seasickness but pills will be provided at the harbour should you need one. We will need all guests full names prior to boarding due to local regulations (please fill in below).</p>
                 </div>
               </div>
             </li>
@@ -226,28 +226,28 @@ if ($rsvp) {
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="invitation-text">How many people in your party (including yourself) will be joining?</label>
-                    <select id="partyInput" class="form-control custom-select">
+                    <select name="partyNo" id="partyInput" class="form-control custom-select">
                       <option value="1" <?php echo $partySelect[1]; ?>>One</option>
                       <option value="2" <?php echo $partySelect[2]; ?>>Two</option>
                       <option value="3" <?php echo $partySelect[3]; ?>>Three</option>
                       <option value="4" <?php echo $partySelect[4]; ?>>Four</option>
                     </select>
-                    <p class="help-block text-danger"></p>
+                    <!-- <p class="help-block text-danger"></p> -->
                   </div>
                   <div class="form-group">
                     <label class="invitation-text">Will you & your guest be joining us for the <a href="#timeline">sunset sail?</a></label><br/>
-                    <select id="sailInput" class="form-control custom-select">
-                      <!-- <option value="" disabled="disabled" selected="selected">Choose an option</option> -->
+                    <select name="sail" id="sailInput" class="form-control custom-select">
+                      <option value="" selected="selected">Choose an option</option>  <!-- disabled="disabled" -->
                       <option value="true" <?php echo $sailSelect[1]; ?>>Yes</option>
                       <option value="false" <?php echo $sailSelect[2]; ?>>No</option>
                     </select>
-                    <p class="help-block text-danger"></p>
+                    <!-- <p class="help-block text-danger"></p> -->
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label class="invitation-text">Anything we should know about?</label>
-                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. allergies, dietary restrictions, guest names, etc."><?php echo $miscText; ?></textarea>
+                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. guest names, allergies, dietary restrictions, etc."><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -268,6 +268,7 @@ if ($rsvp) {
       </div>
     </div>
   </section>
+
   <!-- Details -->
   <section id="details">
     <div class="container">
@@ -300,7 +301,7 @@ if ($rsvp) {
             <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Dress Code</h4>
-          <p class="text-muted">Our <font color=#008080>style</font> is going to be <font color=#008080>Hawaiian (casual comfort)</font>. We hope you can relax and enjoy the sunshine without a formal dress code. The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
+          <p class="text-muted">Our style is going to be Hawaiian (casual comfort). We hope you can relax and enjoy the sunshine without a formal dress code. The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
         </div>
       </div>
       <div class="row text-center">
