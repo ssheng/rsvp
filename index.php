@@ -212,15 +212,25 @@ if ($rsvp) {
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-lg-12">
-          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+          <form class="needs-validation" id="contactForm" name="sentMessage" novalidate="novalidate">
             <div class="form-group">
-              <div class="form-check d-none">
-                <input class="form-control form-check-input" checked="true" type="checkbox" id="weddingInput"></input>
-                <input class="form-control" id="rsvpId" value="<?php echo $id ?>"></input>
+              <div class="form-check">
+                <input class="form-control d-none" id="rsvpId" value="<?php echo $id ?>"></input>
+                <div class="custom-control custom-radio">
+                  <input type="radio" class="custom-control-input" id="AttendRadio" name="radio-stacked" required>
+                  <label class="custom-control-label d-none" for="customControlValidation2">Yes</label>
+                  <p class="invalid-feedback text-center">Please make a selection.</p>
+                </div>
+                <div class="custom-control custom-radio mb-3 d-none">
+                  <input type="radio" class="custom-control-input" id="NotAttendRadio" name="radio-stacked" required>
+                  <label class="custom-control-label" for="customControlValidation3">No</label>
+                </div>
               </div>
             </div>
+
             <div class="collapse show" id="rsvpAcceptCollapse">
               <div class="row">
                 <div class="col-md-6">
@@ -232,15 +242,15 @@ if ($rsvp) {
                       <option value="3" <?php echo $partySelect[3]; ?>>Three</option>
                       <option value="4" <?php echo $partySelect[4]; ?>>Four</option>
                     </select>
-                    <!-- <p class="help-block text-danger"></p> -->
                   </div>
                   <div class="form-group">
                     <label class="invitation-text">Will you & your guest be joining us for the <a href="#timeline">sunset sail?</a></label><br/>
-                    <select name="sail" id="sailInput" class="form-control custom-select">
-                      <option value="" selected="selected">Choose an option</option>  <!-- disabled="disabled" -->
-                      <option value="true" <?php echo $sailSelect[1]; ?>>Yes</option>
-                      <option value="false" <?php echo $sailSelect[2]; ?>>No</option>
+                    <select name="sail" id="sailInput" class="form-control custom-select" required="required">
+                      <option value="" selected="selected" disabled="disabled">Choose an option</option>
+                      <option id="SailYes" value="true" <?php echo $sailSelect[1]; ?>>Yes</option>
+                      <option id="SailNo" value="false" <?php echo $sailSelect[2]; ?>>No</option>
                     </select>
+                    <div class="invalid-feedback">Please make a selection.</div>
                     <!-- <p class="help-block text-danger"></p> -->
                   </div>
                 </div>

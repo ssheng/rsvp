@@ -1,6 +1,6 @@
 $(function() {
 
-  $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
+  $("#contactForm input,#contactForm textarea, #contactForm select").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -10,7 +10,7 @@ $(function() {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
       var id = $("input#rsvpId").val();
-      var wedding = $("input#weddingInput").is(":checked");
+      var wedding = $("input#AttendRadio").is(":checked");
       var party = $("select#partyInput").val();
       var sail = $("select#sailInput").val();
       var misc = $("textarea#miscInput").val();
@@ -34,7 +34,7 @@ $(function() {
           $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#success > .alert-success')
-            .append("<strong>Thank you! Your RSVP has been received. We look forward to seeing you in Maui!</strong>");
+            .append("<strong>Thank you! Your RSVP has been received.</strong>");
           $('#success > .alert-success')
             .append('</div>');
           //clear all fields
@@ -72,3 +72,21 @@ $(function() {
 $('#name').focus(function() {
   $('#success').html('');
 });
+
+$(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
