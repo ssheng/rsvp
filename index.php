@@ -2,10 +2,12 @@
 
 <?php
 require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/i18n.php';
 
 use Rsvp\DataModel\Datastore;
 
 // Form variables
+$i18n = get_i18n_strings('en');
 $partySelect = array('', '', '', '');
 $sailSelect = array('', '');
 $miscText = '';
@@ -73,13 +75,13 @@ if ($rsvp) {
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#timeline">Timeline</a>
+            <a class="nav-link js-scroll-trigger" href="#timeline"><?php echo $i18n['navbar_timeline'] ?></a>
           </li>
           <li class="nav-item <?php echo $display ?>">
             <a class="nav-link js-scroll-trigger" href="#rsvp">RSVP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#details">Info</a>
+            <a class="nav-link js-scroll-trigger" href="#details"><?php echo $i18n['navbar_info'] ?></a>
           </li>
         </ul>
       </div>
@@ -89,8 +91,8 @@ if ($rsvp) {
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <div class="intro-heading">Renee & Sean</div>
-        <div class="intro-lead-in">Maui, Hawaii | 2018.10.6</div>
+        <div class="intro-heading"><?php echo $i18n['title'] ?></div>
+        <div class="intro-lead-in"><?php echo $i18n['sub_title'] ?></div>
          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger <?php echo $display ?>" href="#rsvp">RSVP</a>
         </div>
       </div>
@@ -101,8 +103,8 @@ if ($rsvp) {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Wedding Timeline</h2>
-          <h3 class="section-subheading text-muted">Saturday, Oct. 6, 2018, 10AM - 6PM</h3>
+          <h2 class="section-heading"><?php echo $i18n['timeline']?></h2>
+          <h3 class="section-subheading text-muted"><?php echo $i18n['timeline_details'] ?></h3>
         </div>
       </div>
       <div class="row">
@@ -115,11 +117,11 @@ if ($rsvp) {
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>10:00 - 10:45 AM</h4>
-                  <h4 class="subheading">Ceremony</h4>
+                  <h4 class="subheading"><?php echo $i18n['timeline_ceremony_subheading'] ?></h4>
                 </div>
                 <div class="timeline-body">
                   <!-- <p class="text-muted">Outdoor on Kapalua Bay Deck with panoramic ocean views.</p> -->
-                  <p class="text-muted">The ceremony will take place at the ocean front deck overlooking the Kapalua Bay. Starting sharp at fifteen past ten, please allow ample travel time and arrive the venue before 10:00 AM.</p>
+                  <p class="text-muted"><?php echo $i18n['timeline_ceremony_text'] ?></p>
                 </div>
               </div>
             </li>
@@ -130,10 +132,10 @@ if ($rsvp) {
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>10:45 AM - 12:00 PM</h4>
-                  <h4 class="subheading">Cocktail Hour</h4>
+                  <h4 class="subheading"><?php echo $i18n['timeline_cocktail_subheading'] ?></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Good time to have a drink, relax, and enjoy the deck and the grassy overlook. Take pictures, catch up with old friends and meet new ones. We will have an open bar for you order your favourite drinks.</p>
+                  <p class="text-muted"><?php echo $i18n['timeline_cocktail_text'] ?></p>
                 </div>
               </div>
             </li>
@@ -144,11 +146,11 @@ if ($rsvp) {
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>12:00 - 2:00 PM</h4>
-                  <h4 class="subheading">Reception</h4>
+                  <h4 class="subheading"><?php echo $i18n['timeline_reception_subheading'] ?></h4>
                 </div>
                 <div class="timeline-body">
                   <!-- <p class="text-muted">Please join our lunch reception.</p> -->
-                  <p class="text-muted">Join us for our lunch reception served by Merriman's Kapalua. Please let us know if there is any dietary restrictions in the RSVP form below. Once we have the menu available, you will be able to select your course on this site.</p>
+                  <p class="text-muted"><?php echo $i18n['timeline_reception_text'] ?></p>
                 </div>
               </div>
             </li>
@@ -159,10 +161,10 @@ if ($rsvp) {
               <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>3:30 - 6:00 PM</h4>
-                  <h4 class="subheading">Sunset Sail</h4>
+                  <h4 class="subheading"><?php echo $i18n['timeline_sail_subheading'] ?></h4>
                 </div>
                 <div class="timeline-body">
-                  <p class="text-muted">Departure at <a href="https://www.google.com/maps/place/675+Wharf+St,+Lahaina,+HI+96761/@20.8717721,-156.6789451,17z/data=!4m5!3m4!1s0x79552bb83fad7399:0x5588dff31b6c22d7!8m2!3d20.8719375!4d-156.6788271" target="_blank">Lahaina Harbor: 675 Wharf Street, Lahaina, HI 96761</a>, we will sail into sea to continue our celebration. We were told the sail boat should cause minimal seasickness but pills will be provided at the harbour should you need one. We will need all guests full names prior to boarding due to local regulations (please fill in below).</p>
+                  <p class="text-muted"><?php echo $i18n['timeline_sail_text'] ?></p>
                 </div>
               </div>
             </li>
@@ -192,22 +194,22 @@ if ($rsvp) {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Hello, <?php echo $rsvp['invitees']; ?>!</h2>
+          <h2 class="section-heading"><?php echo $i18n['rsvp_greeting'] ?><?php echo $rsvp['invitees']; ?>!</h2>
           <h3 class="invitation-subheading text-muted">
-            You are cordially invited to
+            <?php echo $i18n['rsvp_greeting_sub'] ?>
           </h3>
-          <h1 class="section-heading">Renee & Sean's Wedding</h1>
-          <h3 class="invitation-subheading text-muted">Saturday, October 6, 2018 10AM - 6PM</h3>
+          <h1 class="section-heading"><?php echo $i18n['rsvp_greeting_sub_heading'] ?></h1>
+          <h3 class="invitation-subheading text-muted"><?php echo $i18n['rsvp_greeting_sub_date'] ?></h3>
           <h3 class="invitation-subheading text-muted">
             <a href="https://www.google.com/maps/place/Merriman's+Maui/@20.9984123,-156.6693332,17z/data=!3m1!4b1!4m5!3m4!1s0x7eaad44b62d8196b:0xe2817ef1b6cae084!8m2!3d20.9984073!4d-156.6671445" target="_blank">
               Merriman's Maui, 1 Bay Club Pl, Lahaina, HI
             </a>
           </h3>
-          <h3 class="invitation-subheading text-muted">Will you be able to join us? Please R.S.V.P. by <?php echo $deadlineLabel ?>.</h3>
+          <h3 class="invitation-subheading text-muted"><?php echo $i18n['rsvp_greeting_sub_attendQ'] ?><?php echo $deadlineLabel ?><?php echo $i18n['rsvp_greeting_sub_attendQ_appendix'] ?></h3>
           <div class="form-group col-lg-12">
           <div class="btn-group-lg text-center" role="group">
-              <button id="rsvpYesButton" type="button" class="btn btn-secondary">Yes</button>
-              <button id="rsvpNoButton" type="button" class="btn btn-secondary">No</button>
+              <button id="rsvpYesButton" type="button" class="btn btn-secondary"><?php echo $i18n['yes'] ?></button>
+              <button id="rsvpNoButton" type="button" class="btn btn-secondary"><?php echo $i18n['no'] ?></button>
           </div>
           </div>
         </div>
@@ -222,7 +224,7 @@ if ($rsvp) {
                 <div class="custom-control custom-radio">
                   <input type="radio" class="custom-control-input" id="AttendRadio" name="radio-stacked" required>
                   <label class="custom-control-label d-none" for="customControlValidation2">Yes</label>
-                  <p class="invalid-feedback text-center">Please make a selection.</p>
+                  <p class="invalid-feedback text-center"><?php echo $i18n['rsvp_invalid_feedback'] ?></p>
                 </div>
                 <div class="custom-control custom-radio mb-3 d-none">
                   <input type="radio" class="custom-control-input" id="NotAttendRadio" name="radio-stacked" required>
@@ -235,29 +237,29 @@ if ($rsvp) {
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="invitation-text">How many people in your party (including yourself) will be joining?</label>
+                    <label class="invitation-text"><?php echo $i18n['rsvp_q1_guest'] ?></label>
                     <select name="partyNo" id="partyInput" class="form-control custom-select">
-                      <option value="1" <?php echo $partySelect[1]; ?>>One</option>
-                      <option value="2" <?php echo $partySelect[2]; ?>>Two</option>
-                      <option value="3" <?php echo $partySelect[3]; ?>>Three</option>
-                      <option value="4" <?php echo $partySelect[4]; ?>>Four</option>
+                      <option value="1" <?php echo $partySelect[1]; ?>><?php echo $i18n['one'] ?></option>
+                      <option value="2" <?php echo $partySelect[2]; ?>><?php echo $i18n['two'] ?></option>
+                      <option value="3" <?php echo $partySelect[3]; ?>><?php echo $i18n['three'] ?></option>
+                      <option value="4" <?php echo $partySelect[4]; ?>><?php echo $i18n['four'] ?></option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="invitation-text">Will you & your guest be joining us for the <a href="#timeline">sunset sail?</a></label><br/>
+                    <label class="invitation-text"><?php echo $i18n['rsvp_q2_sail'] ?></label><br/>
                     <select name="sail" id="sailInput" class="form-control custom-select" required="required">
                       <option value="" selected="selected" disabled="disabled">Choose an option</option>
-                      <option id="SailYes" value="true" <?php echo $sailSelect[1]; ?>>Yes</option>
-                      <option id="SailNo" value="false" <?php echo $sailSelect[2]; ?>>No</option>
+                      <option id="SailYes" value="true" <?php echo $sailSelect[1]; ?>><?php echo $i18n['yes'] ?></option>
+                      <option id="SailNo" value="false" <?php echo $sailSelect[2]; ?>><?php echo $i18n['no'] ?></option>
                     </select>
-                    <div class="invalid-feedback">Please make a selection.</div>
+                    <div class="invalid-feedback"><?php echo $i18n['rsvp_invalid_feedback'] ?></div>
                     <!-- <p class="help-block text-danger"></p> -->
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="invitation-text">Anything we should know about?</label>
-                    <textarea class="form-control" id="miscInput" rows="5" placeholder="e.g. guest names, allergies, dietary restrictions, etc."><?php echo $miscText; ?></textarea>
+                    <label class="invitation-text"><?php echo $i18n['rsvp_q3_comment'] ?></label>
+                    <textarea class="form-control" id="miscInput" rows="5" placeholder= "<?php echo $i18n['rsvp_q3_comment_placeholder'] ?>" ><?php echo $miscText; ?></textarea>
                     <p class="help-block text-danger"></p>
                   </div>
                 </div>
@@ -271,7 +273,7 @@ if ($rsvp) {
             <br>
             <div class="col-lg-12 text-center">
               <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Submit</button>
+              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit"><?php echo $i18n['rsvp_submit'] ?></button>
             </div>
           </form>
         </div>
@@ -284,7 +286,7 @@ if ($rsvp) {
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Wedding Information</h2>
+          <h2 class="section-heading"><?php echo $i18n['wedding_information'] ?></h2>
         </div>
       </div>
       <div class="row text-center">
@@ -293,25 +295,25 @@ if ($rsvp) {
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-map fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Merriman's Maui (Kapalua)</h4>
+          <h4 class="service-heading"><?php echo $i18n['wedding_information_location'] ?></h4>
           <h4 class="service-heading"><a href="https://www.google.com/maps/place/Merriman's+Maui/@20.9984123,-156.6693332,17z/data=!3m1!4b1!4m5!3m4!1s0x7eaad44b62d8196b:0xe2817ef1b6cae084!8m2!3d20.9984073!4d-156.6671445" target="_blank">1 Bay Club Pl, Lahaina, HI</a> </h4>
-          <p class="text-muted">There is a small parking lot in front of the restaurant and a larger parking lot on the right hand side of when you first turn onto Bay Club Pl. Please plan sufficient travel time in case of heavy Saturday morning traffic.</p>
+          <p class="text-muted"><?php echo $i18n['wedding_information_location_text'] ?></p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-calendar-alt fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Saturday, Oct. 6, 2018</h4>
-          <p class="text-muted">The average daytime temperature in Kapalua, Maui in October is warm 27 &deg;C (81 &deg;F) with moderate heat & humidity. The evening temperature is usuaully in the low 20s &deg;C (70s &deg;F).</p>
+          <h4 class="service-heading"><?php echo $i18n['wedding_information_date'] ?></h4>
+          <p class="text-muted"><?php echo $i18n['wedding_information_date_text'] ?></p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Dress Code</h4>
-          <p class="text-muted">Our style is going to be Hawaiian (casual comfort). We hope you can relax and enjoy the sunshine without a formal dress code. The ceremony will be <font color=#008080>outdoors</font> and reception will be <font color=#008080>indoor</font>.</p>
+          <h4 class="service-heading"><?php echo $i18n['wedding_information_dresscode'] ?></h4>
+          <p class="text-muted"><?php echo $i18n['wedding_information_dresscode_text'] ?></p>
         </div>
       </div>
       <div class="row text-center">
@@ -320,9 +322,8 @@ if ($rsvp) {
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-plane fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Kahului Airport (OGG)</h4>
-          <p class="text-muted">Kahului Airport (OGG) is the primary airport on the island of Maui.
-            <br>If you travel inter Hawaiian islands, Kapalua Airport (JHM) located on the west side of Maui provides a short distance from the resort destinations.
+          <h4 class="service-heading"><?php echo $i18n['wedding_information_airport'] ?></h4>
+          <p class="text-muted"><?php echo $i18n['wedding_information_airport_text'] ?>
           </p>
         </div>
         <div class="col-md-4">
@@ -330,13 +331,8 @@ if ($rsvp) {
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-suitcase fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading">Travel</h4>
-          <p class="text-muted"><b>Nearby Hotel Zones:</b> Lahaina, Kaanapali & Kapalua.
-            <br><b>Eating & drinking:</b> Loco Moco, Kalua Pork, Poke, Shave Ice, Acai Bowl, Mai Tai and more.
-            <br><b>Sunrise at Haleakala National Park: </b>
-            Make sunrise viewing reservations  <font color=#008080>(required)</font> at <a href="https://www.recreation.gov/tourParkDetail.do?contractCode=NRSO&parkId=147940" target="_blank">recreation.gov</a>, up to <font color=#008080>60 days</font> in advance.
-            <br><b>Snorkeling spots:</b>
-            Molokini, Black Rock, Turtle Town, Ulua Beach.
+          <h4 class="service-heading"><?php echo $i18n['wedding_information_travel'] ?></h4>
+          <p class="text-muted"><?php echo $i18n['wedding_information_travel_text'] ?>
           </p>
         </div>
         <div class="col-md-4">
@@ -345,7 +341,7 @@ if ($rsvp) {
             <i class="fa fa-gift fa-stack-1x fa-inverse"></i>
           </span>
           <h4 class="service-heading">Gift Registry</h4>
-          <p class="text-muted">We value your presence more than the presents. We appreciate that our families and friends traveling a long distance to be with us for our special moment, we could not ask for more.</p>
+          <p class="text-muted"><?php echo $i18n['wedding_information_gift_text'] ?></p>
         </div>
       </div>
     </div>
