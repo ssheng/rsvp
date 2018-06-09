@@ -7,13 +7,18 @@ require __DIR__ . '/i18n.php';
 use Rsvp\DataModel\Datastore;
 
 // Form variables
-$i18n = get_i18n_strings('en');
 $partySelect = array('', '', '', '');
 $sailSelect = array('', '');
 $miscText = '';
 $deadlineLabel = 'June 30, 2018';
 
-$id = rtrim(ltrim($_SERVER['REQUEST_URI'], '/'), '?');
+// Parse URL path and query string
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$query = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+parse_str($query, $kvp);
+$i18n = get_i18n_strings($kvp['language']);
+
+$id = rtrim(ltrim($path, '/'), '?');
 if ($id) {
   $datastore = new Datastore('wedding-rsvp-201609');
   $rsvp = $datastore->read($id);

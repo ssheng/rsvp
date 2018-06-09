@@ -12,23 +12,23 @@ function get_i18n_strings($language)
 
         // Title Section
         $i18n['title'] = 'Yuqing & Sean';
-        $i18n['sub_title'] = '夏威夷 Maui ｜ 2018.10.6';
+        $i18n['sub_title'] = '夏威夷 ｜ 2018.10.6';
 
         // Wedding Timeline Section
         $i18n['timeline'] = '婚礼日程';
         $i18n['timeline_details'] = '2018年10月6日 星期六 10AM - 6PM';
 
         $i18n['timeline_ceremony_subheading'] = '海边仪式';
-        $i18n['timeline_ceremony_text'] = '我们将在海边举行简短的仪式。敬请于早上10点准时到达场地，签到后，敬请移步至海边露台。仪式将于早上十点十五分准时开始。';
+        $i18n['timeline_ceremony_text'] = '我们的幸福需要您与大海的见证，诚邀您在Kapalua海湾参加我们的婚礼。请于上午10点到达海边露台。简短的仪式将于上午十点十五分准时开始。';
 
         $i18n['timeline_cocktail_subheading'] = '鸡尾酒会';
-        $i18n['timeline_cocktail_text'] = '请一边享用您喜爱的饮品，一边欣赏阳光美景沙滩。除了海边的露台外，还可以移步至草坪。';
+        $i18n['timeline_cocktail_text'] = '仪式前后，备有饮品。您可以漫步在阳光下的沙滩和绿茵，伴有大海的吟唱分享我们的甜蜜';
 
         $i18n['timeline_reception_subheading'] = '婚礼宴会';
         $i18n['timeline_reception_text'] = '婚宴将由Merriman\'s Kapalua提供. 如果您有特殊的饮食要求，麻烦告知我们哦。';
         
         $i18n['timeline_sail_subheading'] = '夕阳泛舟';
-        $i18n['timeline_sail_text'] = '在夕阳中泛舟，驶向大海深处。我们将从<a href="https://www.google.com/maps/place/675+Wharf+St,+Lahaina,+HI+96761/@20.8717721,-156.6789451,17z/data=!4m5!3m4!1s0x79552bb83fad7399:0x5588dff31b6c22d7!8m2!3d20.8719375!4d-156.6788271" target="_blank">Lahaina Harbor: 675 Wharf Street, Lahaina, HI 96761</a>出发。晕船现象应该比较少见，但以防万一，我们会准备晕船药品。此外，我们会在婚礼之前，跟大家再次确认宾客信息，制作登船名单。';
+        $i18n['timeline_sail_text'] = '扬帆踏浪观沧海，粼粼波光依斜阳。我们将从<a href="https://www.google.com/maps/place/675+Wharf+St,+Lahaina,+HI+96761/@20.8717721,-156.6789451,17z/data=!4m5!3m4!1s0x79552bb83fad7399:0x5588dff31b6c22d7!8m2!3d20.8719375!4d-156.6788271" target="_blank">Lahaina Harbor: 675 Wharf Street, Lahaina, HI 96761</a>出发，行程大约2个小时。我们会准备一些晕船药品，希望美好的景色能使您忘却不适。此外，根据当地法规要求，我们会在婚礼之前，跟大家再次确认宾客信息，制作登船宾客名单。';
 
         // RSVP Section
         $i18n['rsvp_greeting'] = 'Hello，';
@@ -54,7 +54,7 @@ function get_i18n_strings($language)
         $i18n['wedding_information_location_text'] = '餐厅门口设有少量停车位，此外餐厅还设有停车场。大停车场在转弯进入Bay Club Pl之后您的左手边。期待您的光临。';
 
         $i18n['wedding_information_date'] = '2018.10.6 星期六 10AM';
-        $i18n['wedding_information_date_text'] = '十月的夏威夷气候宜人，湿度、湿度适中。平均气温在最低20&deg;C至最高27&deg;C左右。请您做好防晒工作，海边风大，也注意防寒保暖。';
+        $i18n['wedding_information_date_text'] = '十月的夏威夷气候宜人，湿度、湿度适中。平均气温在最低20&deg;C至最高27&deg;C左右。请您做好防晒工作，海边风大，也注意防寒保暖哦。';
 
         $i18n['wedding_information_dresscode'] = '打扮美美哒';
         $i18n['wedding_information_dresscode_text'] = '我们对着装没有特殊要求，我们只希望您能够在舒适的环境中分享我们的喜悦。仪式将在户外海边露台举行，稍后婚宴敬请挪步至餐厅内。';
@@ -67,12 +67,12 @@ function get_i18n_strings($language)
         $i18n['wedding_information_travel_text'] = '<b>酒店区：</b> Lahaina, Kaanapali & Kapalua。
         <br><b>当地美食：</b> Loco Moco, Kalua Pork, Poke, Shave Ice, Acai Bowl, Mai Tai 等等。
         <br><b>Haleakala国家公园观看日出: </b>
-        目前国家公园要求进入园区观看日出的游客，<font color=#008080>必须</font>提前在 <a href="https://www.recreation.gov/tourParkDetail.do?contractCode=NRSO&parkId=147940" target="_blank">recreation.gov</a>上申请预约。名额有限，您最早可以提前 <font color=#008080>60天</font> 递交预约申请。
+        目前国家公园要求进入园区观看日出的游客，<font color=#008080>必须</font>在 <a href="https://www.recreation.gov/tourParkDetail.do?contractCode=NRSO&parkId=147940" target="_blank">recreation.gov</a>上申请预约。名额有限，您最早可以提前 <font color=#008080>60天</font> 递交预约申请。
         <br><b>浮潜好去处:</b>
         Molokini, Black Rock, Turtle Town, Ulua Beach等等。';
 
         $i18n['wedding_information_gift'] = 'Gift Registry';
-        $i18n['wedding_information_gift_text'] = '我们的家人朋友们来自世界各地，大家穿过太平洋来到夏威夷已经不易。在此，我们表达我们最诚挚的感谢。';
+        $i18n['wedding_information_gift_text'] = '感谢大家从世界的各个角落，穿过太平洋与我们共同分享喜悦。最诚挚的感谢送给远道而来，以及关心我们的家人和朋友们。';
 
         $i18n['one'] = '一人';
         $i18n['two'] = '两人';
